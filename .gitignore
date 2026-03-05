@@ -3,6 +3,9 @@
 # vscode stuff
 /.vscode/
 
+# cursor
+/.cursor/
+
 # dependencies
 /node_modules
 /.pnp
