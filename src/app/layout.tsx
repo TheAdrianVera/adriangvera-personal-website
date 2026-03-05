@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import AnimateBody from "@components/motion/AnimateBody"
 import Navbar from "@components/Navbar"
+import { Analytics } from "@vercel/analytics/next"
 
 //   src: "./fonts/GeistVF.woff",
 //   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
         <div>{children}</div>
       </AnimateBody>
       </body>
+      <Analytics />
     </html>
   )
 }
