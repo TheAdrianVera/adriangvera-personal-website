@@ -21,6 +21,7 @@ export interface ProjectDescription {
     role: string[],
     evolution: ProjectPhase[],
     architectureDiagram: string,
+    phoneScreenshots?: string,
     outcomes: string[],
     approach: string[],
     currentResponsibilities: string[]
@@ -109,6 +110,7 @@ export const projects: Project[] = [
                 }
             ],
             architectureDiagram: '/portfolio/advanced/ahsllcdiagram.png',
+            phoneScreenshots: '/portfolio/advanced/AdvancedIphoneLong.png',
             outcomes: [
                 '4+ year partnership (since 2020)',
                 '2 major website iterations',
@@ -262,6 +264,7 @@ export const projects: Project[] = [
                 }
             ],
             architectureDiagram: '/portfolio/fhp/fhpdiagram.png',
+            phoneScreenshots: '/portfolio/fhp/FHPaschenIphoneLong.png',
             outcomes: [
                 '5+ years of ongoing technical partnership',
                 'Added multiple sector landing pages supporting business growth',

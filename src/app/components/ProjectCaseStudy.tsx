@@ -110,6 +110,21 @@ export function ProjectCaseStudy({ project, desc }: ProjectCaseStudyProps) {
                 )}
             </section>
 
+            {/* Phone screenshots (mobile preview) — when present */}
+            {desc.phoneScreenshots && (
+                <section>
+                    <h2 className="text-xl font-semibold text-gray-900 mb-3">Mobile Preview</h2>
+                    <div className="rounded-xl border border-gray-200 shadow-sm overflow-hidden bg-gray-50/30">
+                        <img
+                            src={desc.phoneScreenshots}
+                            alt="Mobile view screenshots"
+                            className="w-full h-auto object-contain"
+                        />
+                    </div>
+                </section>
+            )}
+
+
             {/* Evolution: accordion (collapsible phases) */}
             {desc.evolution && desc.evolution.length > 0 && (
                 <section>
@@ -146,6 +161,7 @@ export function ProjectCaseStudy({ project, desc }: ProjectCaseStudyProps) {
                     </div>
                 </section>
             )}
+
 
             {/* Outcomes | Approach side by side */}
             <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
