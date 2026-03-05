@@ -98,6 +98,26 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, isOpen, onClose })
                             )}
                         </div>
                     )}
+
+                    {/* Mobile preview (phone screenshots) — only when present; image repeats horizontally within container */}
+                    {project.description?.phoneScreenshots && (
+                        <div>
+                            <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Mobile preview</h3>
+                            <div className="rounded-xl border border-gray-200 overflow-hidden bg-gray-50/50">
+                                <div
+                                    className="h-56 w-full overflow-hidden"
+                                    style={{
+                                        backgroundImage: `url(${project.description.phoneScreenshots})`,
+                                        backgroundRepeat: 'repeat-x',
+                                        backgroundSize: 'auto 100%',
+                                        backgroundPosition: '-25% center',
+                                    }}
+                                    role="img"
+                                    aria-label={`${project.title} mobile preview`}
+                                />
+                            </div>
+                        </div>
+                    )}
                     
                     {/* Technologies (left) | Key achievements + Design tools stacked (right) */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
